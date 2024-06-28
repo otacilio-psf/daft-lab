@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+data/bronze.db
+data/silver.db
+data/raw
+data/catalog.db
 # C extensions
 *.so
 
