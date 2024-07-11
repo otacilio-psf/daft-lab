@@ -23,7 +23,7 @@ def write_table(catalog, table, df, mode="overwrite"):
     if not table_tuple in catalog.list_tables(table_tuple[0]):
         iceberg_table = catalog.create_table(
             table,
-            schema=df.to_arrow().schema
+            schema=df.limit(0).to_arrow().schema
         )
     else:
         iceberg_table = catalog.load_table(table)
